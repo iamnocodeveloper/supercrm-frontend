@@ -3,7 +3,7 @@
 Aplicación web (SPA) para la gestión de conversaciones y ventas por WhatsApp con agente de IA.
 Este repositorio contiene **únicamente el frontend**. El backend vive en Supabase
 (PostgreSQL + Auth + Realtime + Storage + Edge Functions) y la mensajería se conecta a través
-de WAHA, Zernio (WhatsApp Cloud API de Meta), Twilio, Telegram y un widget de Web Chat propio.
+, Zernio (WhatsApp Cloud API de Meta), Twilio, Telegram y un widget de Web Chat propio.
 
 - **Producto:** Capibet
 - **Versión de la aplicación:** 3.11.0
@@ -35,7 +35,6 @@ Navegador (SPA React + Vite)
         ▼
 Supabase (PostgreSQL + RLS + Auth + Realtime + Storage + Edge Functions)
         │
-        ├── WAHA                → WhatsApp por sesión QR
         ├── Zernio / Meta       → WhatsApp Cloud API oficial (multi-cuenta, failover)
         ├── Twilio              → SMS / WhatsApp
         ├── Telegram Bot API    → Telegram
@@ -100,7 +99,6 @@ Supabase (PostgreSQL + RLS + Auth + Realtime + Storage + Edge Functions)
 
 **Canales soportados**
 
-- WhatsApp vía **WAHA** (sesión por QR).
 - WhatsApp Business API oficial vía **Zernio / Meta Cloud API** (varias API keys por cuenta,
   con failover).
 - **Twilio** (SMS / WhatsApp).
@@ -155,8 +153,7 @@ VITE_SUPABASE_PUBLISHABLE_KEY=...
 VITE_SUPABASE_PROJECT_ID=...
 ```
 
-Las claves sensibles (`service_role`, WAHA, Gemini, Meta) **no** van en el frontend: se
-configuran como *secrets* de las Edge Functions en el servidor.
+
 
 ## 8. Estructura del proyecto
 
