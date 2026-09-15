@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CRM SaaS Design System - Professional WhatsApp CRM Interface */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 35 89% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 35 89% 48%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16.7% 46.9%;
+
+    --accent: 35 89% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 35 89% 54%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 31% 91%;
+    --input: 0 0% 100%;
+    --ring: 35 89% 54%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(35 89% 54%), hsl(35 89% 48%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 96.1%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-hero: linear-gradient(135deg, hsl(35 89% 54%) 0%, hsl(35 89% 48%) 100%);
+
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.15), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.18), 0 4px 6px -4px hsl(0 0% 0% / 0.12);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.2), 0 8px 10px -6px hsl(0 0% 0% / 0.14);
+    --shadow-glow: 0 0 40px hsl(35 89% 54% / 0.25);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222.2 47.4% 11.2%;
+    --sidebar-primary: 35 89% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
+    --sidebar-border: 214 31% 91%;
+    --sidebar-ring: 35 89% 54%;
+    
+    --whatsapp-green: 142 70% 49%;
+    --telegram-blue: 200 100% 40%;
+    --twilio-red: 0 100% 50%;
+  }
+
+  .dark {
+    --background: 215 18% 11%;
+    --foreground: 0 0% 100%;
+    --card: 216 12% 16%;
+    --card-foreground: 0 0% 100%;
+    --popover: 216 12% 16%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 35 89% 54%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 35 89% 48%;
+    --secondary: 215 11% 23%;
+    --secondary-foreground: 210 11% 91%;
+    --muted: 215 11% 23%;
+    --muted-foreground: 218 11% 65%;
+    --accent: 35 89% 54%;
+    --accent-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 89% 54%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 11% 23%;
+    --input: 216 12% 16%;
+    --ring: 35 89% 54%;
+    --gradient-primary: linear-gradient(135deg, hsl(35 89% 54%), hsl(35 89% 48%));
+    --gradient-secondary: linear-gradient(135deg, hsl(216 12% 16%), hsl(215 18% 11%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-hero: linear-gradient(135deg, hsl(35 89% 54%) 0%, hsl(35 89% 48%) 100%);
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -2px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -4px hsl(0 0% 0% / 0.5);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.6), 0 8px 10px -6px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 40px hsl(35 89% 54% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --radius: 0.5rem;
+    --sidebar-background: 215 18% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 35 89% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 216 12% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 11% 23%;
+    --sidebar-ring: 35 89% 54%;
+    
+    --whatsapp-green: 142 70% 49%;
+    --telegram-blue: 200 100% 40%;
+    --twilio-red: 0 100% 50%;
+  }
+
+  .bg-white {
+    --tw-bg-opacity: 1;
+    background-color: transparent !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+
+  /* Gradient backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .bg-gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Custom shadows */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Custom card with gradient border */
+  .card-gradient {
+    @apply bg-card border border-border/50 rounded-lg shadow-lg;
+    background: linear-gradient(var(--card), var(--card)) padding-box,
+      var(--gradient-primary) border-box;
+  }
+
+  /* Glass effect */
+  .glass-effect {
+    @apply bg-background/80 backdrop-blur-sm border border-border/50;
+  }
+
+  /* CapibetCRM thin scrollbar - 6px width */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+    transition: background-color 0.2s ease;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Apply thin scrollbar globally */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
+  }
+}
+
+/* Ocultar el badge/CTA de Lovable */
+#lovable-badge-cta {
+    display: none !important;
+    display: flex;
+    align-items: center;
+    gap: var(--badge-gap);
+    padding: 0 var(--badge-padding);
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: var(--badge-radius) 0 0 var(--badge-radius);
+    transition: background-color var(--badge-transition-duration) ease, color var(--badge-transition-duration) ease;
+}
