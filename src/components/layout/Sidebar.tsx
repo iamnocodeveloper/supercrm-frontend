@@ -7,6 +7,8 @@ import { useConversations } from '@/hooks/useConversations';
 import { useTheme } from 'next-themes';
 import { useUserPermissions } from '@/hooks/useUserPermissions';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { SystemInfoDialog } from '@/components/system/SystemInfoDialog';
+import { APP_VERSION } from '@/lib/appInfo';
 
 // Usuario con acceso exclusivo al módulo de Email Masivo (configurable por entorno)
 const EMAIL_ONLY_USER = import.meta.env.VITE_EMAIL_ONLY_USER || '';
@@ -314,9 +316,14 @@ export const Sidebar = () => {
                   <p className="text-xs text-sidebar-foreground/60">Usuario</p>
                 </div>}
             </div>
-            {!isCollapsed && <div className="text-xs text-muted-foreground text-center mt-3">
-                Versión 3.11.0 10-09-26
-              </div>}
+            {!isCollapsed && <SystemInfoDialog>
+                <button
+                  type="button"
+                  className="w-full text-xs text-muted-foreground text-center mt-3 hover:text-sidebar-primary transition-colors"
+                >
+                  Versión {APP_VERSION} · Acerca del sistema
+                </button>
+              </SystemInfoDialog>}
           </div>
         </div>
       </div>

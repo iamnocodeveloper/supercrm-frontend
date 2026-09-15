@@ -1,7 +1,8 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "supercrm-frontend",
   "private": true,
-  "version": "1.4.5",
+  "version": "3.11.0",
+  "description": "Frontend de Capibet: plataforma multi-tenant de gestión de conversaciones y ventas por WhatsApp con agente de IA.",
   "type": "module",
   "scripts": {
     "dev": "vite",

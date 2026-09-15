@@ -5,7 +5,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { useProfile } from '@/hooks/useProfile';
 import { useToast } from '@/hooks/use-toast';
 import { User, Lock, Eye, EyeOff } from 'lucide-react';
-import logo from '@/assets/supercrm-logo.jpg';
+import logo from '@/assets/logocapinegro.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -83,14 +83,14 @@ const Login = () => {
       {/* Mobile Logo - Only visible on small screens */}
       <div className="lg:hidden flex justify-center py-8 px-4 bg-background">
         <div className="text-center">
-          <div className="w-16 h-16 mx-auto mb-4">
+          <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-2xl p-2">
             <img
               src={logo}
-              alt="SUPERCRM Logo"
+              alt="Capibet Logo"
               className="w-full h-full object-contain"
             />
           </div>
-          <h1 className="text-foreground text-2xl font-bold">SUPERCRM</h1>
+          <h1 className="text-foreground text-2xl font-bold">CAPIBET</h1>
         </div>
       </div>
 
@@ -166,20 +166,20 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Right side - SUPERCRM Logo */}
+      {/* Right side - CAPIBET Logo */}
       <div className="hidden lg:flex flex-1 items-center justify-center bg-gradient-to-br from-primary via-primary to-secondary/50 relative overflow-hidden">
         <div className="text-center z-10">
           <div className="mb-8">
-            {/* SUPERCRM Logo */}
+            {/* CAPIBET Logo */}
             <div className="w-32 h-32 mx-auto rounded-full flex items-center justify-center shadow-2xl overflow-hidden bg-white p-4">
               <img
                 src={logo}
-                alt="SUPERCRM Logo"
+                alt="Capibet Logo"
                 className="w-full h-full object-contain"
               />
             </div>
           </div>
-          <h1 className="text-white text-6xl font-bold mb-2">SUPERCRM</h1>
+          <h1 className="text-white text-6xl font-bold mb-2">CAPIBET</h1>
           <div className="flex items-center justify-center gap-4">
             <div className="h-1 w-16 bg-white/50"></div>
             <span className="text-white text-xl font-medium tracking-wider">CRM</span>

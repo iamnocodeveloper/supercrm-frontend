@@ -17,7 +17,7 @@ import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import logo from '@/assets/supercrm-logo.jpg';
+import logo from '@/assets/logocapinegro.png';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 interface AdminLayoutProps {
@@ -113,7 +113,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
         {/* Logo section */}
         <div className="flex items-center justify-between h-16 px-4 border-b border-sidebar-border">
           <div className="flex items-center space-x-2">
-            <img src={logo} alt="SUPERCRM" className="h-10 w-auto" />
+            <img src={logo} alt="Capibet" className="h-10 w-auto bg-white rounded-lg p-1" />
           </div>
           <Button
             variant="ghost"
